@@ -1,22 +1,19 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Faber Authorized Service Center — Attingal</title>
-  <meta name="description" content="Authorized Faber service in Attingal & Trivandrum — same-day repairs, genuine parts, certified technicians.">
-  <link rel="icon" href="/favicon.ico">
-
+  <meta name="description" content="Authorized Faber service in Attingal — same-day repairs, genuine parts, certified technicians." />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="favicon.png" />
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
-    "name": "Faber Authorized Service Center - Attingal",
+    "name": "Faber Authorized Service Center — Attingal",
     "image": "logo.png",
-    "@id": "https://yourdomain.com",
-    "url": "https://yourdomain.com",
     "telephone": "+91-8606132128",
-    "priceRange": "₹₹",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "B3, Gems Apartments, near Jyothis Public School, Moonu Mukku, Attingal, Kerala 695104",
@@ -25,22 +22,138 @@
       "postalCode": "695104",
       "addressCountry": "IN"
     },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": "8.6940",
-      "longitude": "76.8280"
-    },
-    "openingHours": "Mo,Tu,We,Th,Fr,Sa 09:00-18:00",
-    "sameAs": []
+    "openingHours": "Mo,Tu,We,Th,Fr,Sa 09:00-18:00"
   }
   </script>
-
-  <style>
-    body { font-family: Arial; }
-  </style>
 </head>
 <body>
-  <h1>Faber Authorized Service Center — Attingal</h1>
-  <p>Your service center website is successfully deployed.</p>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <img src="logo.png" alt="Faber Service logo" class="logo" />
+        <div class="brand-text">
+          <h1>Faber Authorized Service Center</h1>
+          <p class="sub">Attingal, Trivandrum</p>
+        </div>
+      </div>
+      <div class="header-actions">
+        <a class="call" href="tel:+91-8606132128">Call: +91-8606132128</a>
+        <a class="btn" href="#book">Book Service</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <p class="eyebrow">Authorized Faber Service</p>
+          <h2>Same-day repairs • Genuine Faber parts • Certified technicians</h2>
+          <p class="lead">Fast, transparent appliance repairs for Attingal & Trivandrum. On-site repairs for most issues. Clear invoices and parts warranty.</p>
+          <div class="cta-row">
+            <a class="btn btn-primary" href="#book">Book a Technician</a>
+            <a class="btn btn-outline" href="#contact">Get Directions</a>
+          </div>
+          <ul class="trust-list">
+            <li>Faber Authorized</li>
+            <li>Genuine parts</li>
+            <li>6-month parts warranty</li>
+            <li>GST invoice</li>
+          </ul>
+        </div>
+        <aside class="hero-card" id="book">
+          <h3>Book a Service</h3>
+          <form id="bookingForm" action="https://formspree.io/f/your-form-endpoint" method="POST">
+            <label>Full name<input name="name" required></label>
+            <label>Phone<input name="phone" required></label>
+            <label>Appliance
+              <select name="appliance" required>
+                <option>Chimney</option>
+                <option>Gas Hob</option>
+                <option>Water Heater</option>
+                <option>Oven</option>
+                <option>Other</option>
+              </select>
+            </label>
+            <label>Issue<textarea name="issue" rows="3"></textarea></label>
+            <label>Preferred date<input type="date" name="date"></label>
+            <label class="consent"><input type="checkbox" name="consent" required> I agree to be contacted</label>
+            <input type="hidden" name="_subject" value="New Service Booking">
+            <button class="btn btn-primary" type="submit">Submit Booking</button>
+            <p class="small">Or call us: <a href="tel:+91-8606132128">+91-8606132128</a></p>
+          </form>
+          <p class="small-muted">Replace the form action with your Formspree endpoint or use Netlify Forms / other backend.</p>
+        </aside>
+      </div>
+    </section>
+
+    <section class="services container">
+      <h3>Our Services</h3>
+      <div class="grid services-grid">
+        <article class="card">
+          <h4>Chimney Repair & Maintenance</h4>
+          <p>Motor replacement, filter change, suction issues — on-site fixes and parts replacement.</p>
+        </article>
+        <article class="card">
+          <h4>Gas Hob Service</h4>
+          <p>Ignition issues, gas leakage checks, burner replacement, and installation support.</p>
+        </article>
+        <article class="card">
+          <h4>Water Heater / Geyser</h4>
+          <p>Heating element checks, thermostat replacement, plumbing & safety inspections.</p>
+        </article>
+        <article class="card">
+          <h4>Oven & Built-in Appliances</h4>
+          <p>Electrical repairs, sensor replacement, door/hinge fixes and calibration.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="about container card">
+      <div class="two-col">
+        <div>
+          <h3>About Us</h3>
+          <p>We are the authorized Faber service center for Attingal and nearby areas. Our technicians are trained on Faber service protocols and only use genuine spare parts. We provide clear invoices, parts warranty and transparent pricing.</p>
+          <h4>How we work</h4>
+          <ol>
+            <li>Book online or call.</li>
+            <li>Technician visits & diagnosis.</li>
+            <li>Repair with genuine parts — invoice & warranty.</li>
+          </ol>
+        </div>
+        <div>
+          <h4>Contact & Location</h4>
+          <p class="muted">B3, Gems Apartments, near Jyothis Public School, Moonu Mukku, Attingal, Kerala 695104</p>
+          <p class="muted">Phone: <a href="tel:+91-8606132128">+91-8606132128</a></p>
+          <div class="map-wrap">
+            <iframe loading="lazy" src="https://www.google.com/maps?q=B3, Gems Apartments, near Jyothis Public School, Moonu Mukku, Attingal, Kerala 695104&output=embed"></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq container card">
+      <h3>FAQ</h3>
+      <details><summary>Do you use genuine Faber parts?</summary><p>Yes — we are an authorized Faber service center and only fit genuine parts. Parts have a 6-month warranty.</p></details>
+      <details><summary>Do you provide on-site service?</summary><p>Most repairs are fixed on-site; larger jobs may require workshop service — we provide pickup when needed.</p></details>
+    </section>
+
+    <section class="testimonials container">
+      <h3>Customer Reviews</h3>
+      <div class="grid">
+        <blockquote class="quote card">"Fast, honest and professional service. Replaced my chimney motor quickly." — Anu, Attingal</blockquote>
+        <blockquote class="quote card">"Genuine parts and clear invoice. Highly recommended." — Ramesh</blockquote>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>© 2025 Faber Authorized Service Center — Attingal</div>
+      <div><a href="#book" class="btn btn-small">Book Service</a></div>
+    </div>
+  </footer>
+
+  <script src="scripts.js"></script>
 </body>
 </html>
