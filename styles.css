@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
 
 :root{
   --primary-green:#0C5037;
@@ -7,7 +8,7 @@
   --bg:#F3EFE6;
   --card:#ffffff;
   --container:1200px;
-  font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  font-family: Poppins, Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
 }
 *{box-sizing:border-box}
 html,body{height:100%}
@@ -48,36 +49,22 @@ h2{font-size:36px;margin:8px 0;color:var(--text)}
 .form-card{background:var(--card);border-radius:14px;padding:20px;box-shadow:0 12px 32px rgba(0,0,0,0.06);border:1px solid rgba(0,0,0,0.04)}
 @media (max-width:900px){.hero-inner{grid-template-columns:1fr}.header-inner{flex-direction:column;align-items:flex-start;gap:12px}.main-nav{display:none}.logo{height:72px}}
 
-/* Icons inside card titles */
-.card .icon { width:28px;height:28px;vertical-align:middle;margin-right:10px;opacity:0.95; }
+/* Improved spacing for sections */
+.section { padding: 48px 0; }
 
-/* Hover effects */
-a.btn:hover { transform: translateY(-3px); box-shadow:0 18px 40px rgba(12,80,55,0.12); transition: all 220ms ease; }
-.service-card:hover { transform: translateY(-6px); box-shadow:0 20px 50px rgba(12,80,55,0.10); transition: all 260ms cubic-bezier(.2,.9,.3,1); }
-.testimonial:hover { transform: translateY(-6px); box-shadow:0 20px 40px rgba(12,80,55,0.06); transition: all 220ms ease; }
+/* Card accordion (show title only, reveal description) */
+.service-card { cursor: pointer; position: relative; overflow: hidden; transition: transform 0.22s ease, box-shadow 0.22s ease; }
+.service-card .card-title { font-weight:700; font-size:18px; color:var(--primary-green); }
+.service-card .card-desc { max-height:0; overflow:hidden; transition: max-height 0.32s ease, padding 0.32s ease; color:var(--muted); padding:0 0; font-size:14px; }
+.service-card.open { transform: translateY(-4px); box-shadow:0 18px 40px rgba(12,80,55,0.09); }
+.service-card.open .card-desc { padding:12px 0 0 0; max-height:240px; }
 
-/* Entry animations */
-.card, .testimonial, .gallery-grid img { opacity:0; transform: translateY(8px); transition: opacity 520ms ease, transform 520ms ease; }
-.card.in, .testimonial.in, .gallery-grid img.in { opacity:1; transform:none; }
+/* Page transition fade-out */
+.page-fade-enter { opacity: 0; transform: translateY(6px); transition: opacity 0.45s ease, transform 0.45s ease; }
+.page-fade-enter.in { opacity: 1; transform: none; }
 
-/* Stagger effect for services grid */
-.services-grid .service-card { transition-delay: 0ms; }
-.services-grid .service-card:nth-child(1) { transition-delay: 40ms; }
-.services-grid .service-card:nth-child(2) { transition-delay: 80ms; }
-.services-grid .service-card:nth-child(3) { transition-delay: 120ms; }
-.services-grid .service-card:nth-child(4) { transition-delay: 160ms; }
-.services-grid .service-card:nth-child(5) { transition-delay: 200ms; }
+.page-fade-exit { opacity: 1; transition: opacity 0.35s ease; }
+.page-fade-exit.out { opacity: 0; }
 
-/* Button subtle */
-.next-btn:hover { transform: translateX(6px); transition: transform 250ms ease; }
-
-/* Headings weight & letter spacing */
-h2 { font-weight:700; letter-spacing: 0.2px; }
-.card h4, .testimonial strong { letter-spacing: 0.3px; font-weight:600; }
-
-/* Icon color accents */
-.icon--green { fill: var(--primary-green); }
-.icon--gold { fill: var(--accent-gold); }
-
-/* Smooth focus outline for accessibility */
-a:focus, button:focus { outline: 3px solid rgba(12,80,55,0.08); outline-offset:3px; }
+/* Next button */
+.next-btn { display:inline-block; margin-top:18px; background:transparent; color:var(--primary-green); border:1px solid rgba(12,80,55,0.08); padding:10px 14px; border-radius:10px; text-decoration:none; font-weight:700; }

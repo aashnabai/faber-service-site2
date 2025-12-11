@@ -26,7 +26,7 @@
   </div>
 </header>
 
-<main>
+<main class="page-fade-enter">
   <section class="hero container hero-inner">
     <div class="hero-copy">
       <p class="eyebrow">Premium Appliance Service</p>
@@ -36,6 +36,7 @@
         <a class="btn" href="book.html">Book a Technician</a>
         <a class="btn" href="contact.html" style="background:transparent;color:var(--primary-green);border:1px solid rgba(12,80,55,0.08)">Contact Us</a>
       </div>
+      <a class="next-btn" href="#services">Explore Services ➜</a>
       <ul class="trust-list" style="margin-top:16px">
         <li>Genuine parts & transparent pricing</li>
         <li>Trained & certified technicians</li>
@@ -55,16 +56,18 @@
 
   </section>
 
-  <section class="section container">
+  
+  <section class="section container" id="services">
     <h3>Services We Offer</h3>
     <div class="services-grid">
-      <div class="card"><h4><svg class="icon icon--green" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 13h2v6h14v-6h2v8H3v-8zM7 3h10v6H7V3zm12 0h2v6h-2V3z"/></svg>Chimney Repair & Maintenance</h4><p class="small">Motor replacement, filter change, suction and vent fixes.</p></div>
-      <div class="card"><h4><svg class="icon icon--gold" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a9 9 0 100 18 9 9 0 000-18zm1 5h2v6h-2V7zM7 9h2v4H7V9z"/></svg>Induction & Gas Cooktops</h4><p class="small">Induction cooker repair, gas hob and gas stove service and installation.</p></div>
-      <div class="card"><h4><svg class="icon icon--green" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 7a5 5 0 100 10 5 5 0 000-10zM2 6v12h20V6H2z"/></svg>CCTV Systems</h4><p class="small">CCTV installation, DVR/NVR troubleshooting and camera replacement.</p></div>
-      <div class="card"><h4><svg class="icon icon--gold" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C8 6 6 8.5 6 11a6 6 0 0012 0c0-2.5-2-5-6-9z"/></svg>Water Purifiers</h4><p class="small">Filter replacement, RO service, leakage & water quality checks.</p></div>
-      <div class="card"><h4>Inverters & Power Systems</h4><p class="small">Inverter diagnostics, battery checks and maintenance.</p></div>
+      <div class="card service-card" data-service="chimney"><div class="card-title">Chimney Repair & Maintenance</div><div class="card-desc">Motor replacement, duct cleaning, filter change, suction & sensor fixes.</div></div>
+      <div class="card service-card" data-service="cooktop"><div class="card-title">Induction & Gas Cooktops</div><div class="card-desc">Induction cooker troubleshooting, gas hob/stove ignition and burner maintenance.</div></div>
+      <div class="card service-card" data-service="cctv"><div class="card-title">CCTV Systems</div><div class="card-desc">Camera replacement, DVR/NVR support, wiring and remote access setup.</div></div>
+      <div class="card service-card" data-service="water"><div class="card-title">Water Purifiers</div><div class="card-desc">RO servicing, filter replacements, leakage and TDS checks.</div></div>
+      <div class="card service-card" data-service="inverter"><div class="card-title">Inverters & Backup Power</div><div class="card-desc">Inverter diagnostics, battery checks, wiring and commissioning.</div></div>
     </div>
   </section>
+
 
   <section class="section container card">
     <h3>Customer Testimonials</h3>
