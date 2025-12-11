@@ -1,0 +1,1 @@
+Oikos Tech v3 - gallery & technician sections removed; quick contact moved to Contact page. Header/logo enlarged.
